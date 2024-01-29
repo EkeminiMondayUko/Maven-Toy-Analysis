@@ -2,25 +2,35 @@ DAX FORMULAS
 
 REVENUE
 Total YTD revenue = TOTALYTD([Total revenue],Calender[Date])
+
 previous year revenue = CALCULATE([Total revenue],SAMEPERIODLASTYEAR(Calender[Date]))
+
 YOY difference = DIVIDE([Total YTD revenue]-[previous year],[previous year])
+
 Running Total Revenue= CALCULATE([Total revenue],DATESBETWEEN(Calender[Date],STARTOFYEAR(Calender[Date]),MAX(Calender[Date])))
 
-PROFIT
+ PROFIT
 Total YTD profit = TOTALYTD([Total Profit],Calender[Date])
+
 Previous year profit = CALCULATE([Total Profit],SAMEPERIODLASTYEAR(Calender[Date]))
+
 YOY Profit = DIVIDE([Total YTD profit]-[Previous year profit],[Previous year profit])
 
 OUANTITY
-Total YTD quauntity = TOTALYTD([Total quantity],Calender[Date])
+Total YTD quantity = TOTALYTD([Total quantity],Calender[Date])
+
 previous year quantity = CALCULATE([Total quantity],SAMEPERIODLASTYEAR(Calender[Date]))
+
 YOY qunatity = DIVIDE([Total YTD quauntity]-[previous year quantity],[previous year quantity])
 
 ORDERS
 Total YTD orders = TOTALYTD([Total orders],Calender[Date])
+
 previous year orders = CALCULATE([Total orders],SAMEPERIODLASTYEAR(Calender[Date]))
+
 YOY orders = DIVIDE([Total YTD orders]-[previous year orders],[previous year orders])
 
 PROFIT MARGIN
 profit margin = DIVIDE([Total YTD profit],[Total YTD revenue])
+
 PY profit margin = CALCULATE([profit margin],SAMEPERIODLASTYEAR(Calender[Date])) 
